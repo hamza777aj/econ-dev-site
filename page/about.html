@@ -1,0 +1,1001 @@
+<!DOCTYPE HTML>
+
+<html>
+
+ <head>
+
+  <title>Home</title>
+
+   <meta charset="UTF-8">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+ <style>
+
+* {box-sizing:border-box}
+
+
+
+/* Slideshow container */
+
+.slideshow-container {
+
+  width: 500px;
+
+  height: 300px;
+
+  position: relative;
+
+  margin: auto;
+
+}
+
+
+
+/* Hide the images by default */
+
+.mySlides {
+
+    display: none;
+
+}
+
+
+
+/* Next & previous buttons */
+
+.prev, .next {
+
+  cursor: pointer;
+
+  position: absolute;
+
+  top: 50%;
+
+  width: 10px;
+
+  margin-top: -22px;
+
+  padding: 16px;
+
+  color: white;
+
+  font-weight: bold;
+
+  font-size: 18px;
+
+  transition: 0.6s ease;
+
+  border-radius: 0 3px 3px 0;
+
+}
+
+
+
+
+
+/* Position the "next button" to the right */
+
+.next {
+
+  right: 0;
+
+  border-radius: 3px 0 0 3px;
+
+}
+
+
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover, .next:hover {
+
+  background-color: rgba(0,0,0,0.8);
+
+}
+
+
+
+/* Caption text */
+
+.text {
+
+  color: #f2f2f2;
+
+  font-size: 15px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  bottom: 8px;
+
+  width: 100%;
+
+  text-align: center;
+
+}
+
+
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+
+  color: #f2f2f2;
+
+  font-size: 12px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  top: 0;
+
+}
+
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+
+  cursor: pointer;
+
+  height: 15px;
+
+  width: 15px;
+
+  margin: 0 2px;
+
+  background-color: #bbb;
+
+  border-radius: 50%;
+
+  display: inline-block;
+
+  transition: background-color 0.6s ease;
+
+}
+
+
+
+.active, .dot:hover {
+
+  background-color: #717171;
+
+}
+
+
+
+/* Fading animation */
+
+.fade {
+
+  -webkit-animation-name: fade;
+
+  -webkit-animation-duration: 1.5s;
+
+  animation-name: fade;
+
+  animation-duration: 1.5s;
+
+}
+
+
+
+@-webkit-keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+@keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+
+
+/*-------------------------------------------------------------*/
+
+
+
+/* Style the sidenav links and the dropdown button */
+
+body {
+
+    font-family: "Lato", sans-serif;
+
+   
+
+}
+
+
+
+/* Fixed sidenav, full height */
+
+.sidenav {
+
+    height: 100%;
+
+    width: 200px;
+
+    position: fixed;
+
+    z-index: 1;
+
+    bottom: 0;
+
+    left: 0;
+
+    background-color: #111;
+
+    overflow-x: hidden;
+
+    padding-top: 20px;
+
+  
+
+
+
+}
+
+
+
+/* Style the sidenav links and the dropdown button */
+
+.sidenav a, .dropdown-btn {
+
+    padding: 6px 16px 6px 16px;
+
+    text-decoration: none;
+
+    font-size: 20px;
+
+    color: #818181;
+
+    display: block;
+
+    border: none;
+
+    background: none;
+
+    width: 100%;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    outline: none;
+
+}
+
+
+
+/* On mouse-over */
+
+.sidenav a:hover, .dropdown-btn:hover {
+
+    color: #f1f1f1;
+
+}
+
+
+
+
+
+
+
+
+
+a.active {
+
+    background-color: #4CAF50;
+
+    color: white;
+
+}
+
+
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+
+.dropdown-container {
+
+    display: none;
+
+    background-color: #262626;
+
+    padding-left: 8px;
+
+    padding-right: 10px;
+
+}
+
+
+
+/* Optional: Style the caret down icon */
+
+.fa-caret-down {
+
+    float: right;
+
+    padding-right: 8px;
+
+}
+
+
+
+/* Some media queries for responsiveness */
+
+@media screen and (max-height: 450px) {
+
+    .sidenav {padding-top: 15px;}
+
+    .sidenav a {font-size: 18px;}
+
+}
+
+
+
+.footer {
+
+    padding: 20px; /* Some padding */
+
+    text-align: center; /* Center text*/
+
+    background: #ddd; /* Grey background */
+
+    width: 101%;
+
+   
+
+    
+
+}
+
+
+
+/* Header/logo Title */
+
+.header {
+
+    padding: 1px;
+
+    text-align: center;
+
+    background: #4CAF50;
+
+    color: white;
+
+    width: 101%;
+
+    z-index: 1;
+
+    margin-top: -8px;
+
+    
+
+}
+
+
+
+/* Increase the font size of the heading */
+
+.header h1 {
+
+    font-size: 40px;
+
+    
+
+}
+
+
+
+/* Page content */
+
+.content {
+
+  padding: 16px;
+
+}
+
+
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+
+.sticky {
+
+  position: fixed;
+
+  top: 0;
+
+  width: 100%
+
+}
+
+
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+
+.sticky + .content {
+
+  padding-top: 102px;
+
+}
+
+
+
+.right-main {
+
+    text-align: center;
+
+    position: fixed;
+
+    margin-left: 1000px;    
+
+    background: #ddd;
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    margin-top: 100px;   
+
+}
+
+
+
+.right-main h2 {
+
+    text-align: center;
+
+     
+
+        
+
+    background: #c1c1c1;
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+}
+
+.main {
+
+    text-align: center;
+
+    margin-left: 190px;
+
+    margin-right: 260px;
+
+    padding: 10px;
+
+}
+
+.main h1{
+
+    font-size: 35px;
+
+}
+
+
+
+.main p {
+
+    line-height: 1.5;
+
+
+
+}
+
+
+
+.info h2 {
+
+    text-align: center;
+
+     
+
+        
+
+    background: #bbb;
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+}
+
+
+
+.info {
+
+    text-align: center;
+
+    margin: 20px;
+
+       
+
+    background: #ddd;
+
+    border-radius: 15px;
+
+    padding: 20px;  
+
+
+
+}
+
+ 
+
+.btn {
+
+  border: 2px solid black;
+
+  border-radius: 5px;
+
+  background-color: white;
+
+  color: black;
+
+  padding: 14px 28px;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+}
+
+
+
+/* Green */
+
+.Email {
+
+  
+
+  border-color: #4CAF50;
+
+  color: green;
+
+}
+
+
+
+.Email:hover {
+
+  background-color: #4CAF50;
+
+  color: white;
+
+}
+
+
+
+table {
+
+    font-family: arial, sans-serif;
+
+    border-collapse: collapse;
+
+    width: 100%;
+
+    padding: 20px;
+
+    margin-left: 20px;
+
+    margin-right: 20px;
+
+    
+
+}
+
+
+
+td, th {
+
+    border: 1px solid #dddddd;
+
+    text-align: left;
+
+    padding: 8px;
+
+}
+
+
+
+tr:nth-child(even) {
+
+    background-color: #dddddd;
+
+}
+
+
+
+
+
+</style>
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+<div class="header" id="myHeader">
+
+  <h1>Economic Development</h1>
+
+</div>
+
+
+
+<div class="sidenav">
+
+  <a class="active" href="page/home.html" >Home</a>
+
+
+
+  <button class="dropdown-btn">Business
+
+    <i class="fa fa-caret-down"></i>
+
+  </button>
+
+  <div class="dropdown-container">
+
+    <a href="page/aztech.html">AZ Techcelerator</a>
+
+    <a href="page/licensing.html">Licensing/ Applications</a>
+
+    <a href="page/advanced-manufacturing.html">(A)dvanced Manufacturing</a>
+
+    <a href="page/innovation.html">(I)nnovation</a>
+
+    <a href="page/medical-travel.html">(M)edical Travel</a>
+
+    <a href="page/signature-retail.html">(S)ignature Retail</a>
+
+  </div>
+
+
+
+  <button class="dropdown-btn">Jobs 
+
+    <i class="fa fa-caret-down"></i>
+
+  </button>
+
+  <div class="dropdown-container">
+
+  
+
+    <a href="page/employees.html">Employees/Seek a job</a>
+
+    <a href="page/employers.html">Employers/Submit a job</a>
+
+  </div> 
+
+
+
+  <button class="dropdown-btn">Demographics 
+
+    <i class="fa fa-caret-down"></i>
+
+  </button>
+
+  <div class="dropdown-container">
+
+    <a href="page/demo-reports.html">Reports, Forms, Brochures</a>
+
+    <a href="page/demo-areas.html">Development Areas</a>
+
+  </div>
+
+  
+
+  <a href="page/community-profile.html">Community Profile</a>
+
+
+
+  <a href="page/faq.html">FAQ</a>
+
+
+
+  <a href="page/about.html">About Us</a>
+
+</div>
+
+
+
+<script>
+
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+
+var i;
+
+
+
+for (i = 0; i < dropdown.length; i++) {
+
+  dropdown[i].addEventListener("click", function() {
+
+    this.classList.toggle("active");
+
+    var dropdownContent = this.nextElementSibling;
+
+    if (dropdownContent.style.display === "block") {
+
+      dropdownContent.style.display = "none";
+
+    } else {
+
+      dropdownContent.style.display = "block";
+
+    }
+
+  });
+
+}
+
+</script>
+
+<script>
+
+// When the user scrolls the page, execute myFunction 
+
+window.onscroll = function() {myFunction()};
+
+
+
+// Get the header
+
+var header = document.getElementById("myHeader");
+
+
+
+// Get the offset position of the navbar
+
+var sticky = header.offsetTop;
+
+
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+
+function myFunction() {
+
+  if (window.pageYOffset > sticky) {
+
+    header.classList.add("sticky");
+
+  } else {
+
+    header.classList.remove("sticky");
+
+  }
+
+}
+
+</script>
+
+  <div class="right-main">
+
+      <h2>CONTACT US</h2>
+
+      <h5>Director: Jeanine Jerkovic</h5>
+
+      <h5>Phone: 623-222-3300</h5>
+
+      <h5>Email: econdev@surpriseaz.gov</h5>
+
+      <h5>Fax: 623-222-3301</h5>
+
+      <h5>Address: 16000 N. Civic Center Plaza Surprise, AZ 85374</h5>
+
+      <div id="map" style="width:100%;height:200px;"></div>
+
+
+
+<script>
+
+function myMap() {
+
+  var mapCanvas = document.getElementById("map");
+
+  var mapOptions = {
+
+    center: new google.maps.LatLng(33.629566, -112.368046), zoom: 10
+
+  };
+
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+
+}
+
+</script>
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDstQB3zNs_wv26n958FQz6GOvrTYYcuno&callback=myMap"></script>
+
+      
+
+</div>
+
+
+
+  <div class="main">
+
+<div class="info">
+
+          <h1>About Us</h1>
+
+
+
+<h2>Jeanine Jerkovic</h2>
+
+<h4>Economic Development Director</h4>
+
+<h4>Email: jeanine.jerkovic@surpriseaz.gov</h4>
+
+<h4>Phone: 623-222-3327</h4>
+
+<p>Jeanine Jerkovic returned to the City of Surprise as the Economic Development Director in December 2014, previously serving as the City's Economic Development Manager from 2006-2010. Prior to returning to the Surprise team, Jeanine worked as the Economic Development Manager for the City of Peoria, as Economic Development Administrator for the City of Glendale, and as a Trade Commissioner for the Canadian Consulate in Phoenix. Previous positions held in the economic development profession have included Vice President of International Programs at the Greater Phoenix Economic Council and International Trade Coordinator for the Arizona Department of Commerce. A lifelong resident of the West Valley, Jeanine had the privilege of being among the first class of Arizona State University West Campus students to graduate from ASU's Honors College. She graduated Summa Cum Laude with a Bachelor's degree in Political Science and German language and has a Master's degree in Comparative Politics from the London School of Economics.</p>
+
+</div>
+
+</br>
+
+
+
+<div class="info">
+
+<h2>Suzanne Boyles</h2>
+
+<h4>Economic Development Coordinator</h4>
+
+<h4>Email: suzanne.boyles@surpriseaz.gov</h4>
+
+<h4>Phone: 623-222-3323</h4>
+
+<p>Suzie Boyles is an Economic Development Coordinator with the City of Surprise. Suzie's primary focus is around business attraction and marketing efforts within a variety of industries, specializing in advanced manufacturing, distribution and logistics, data centers, retail & entertainment, and healthcare. Within her first 2 years in Surprise, Suzie has successfully worked on approximately 10 difference projects representing over 400,000 square feet of new industrial developments, over 70,000 square feet of healthcare and numerous retail & entertainment developments. Prior to joining the City of Surprise, Suzie was the Economic Development Manager for the City of Buckeye where she successfully implemented strategies designed to attract, retain, and grow businesses in the City. During her time in Buckeye she lead incentive negotiations in support of new retail developments, was instrumental in implementing the city's first ever Lodging Tax to support the city's tourism initiatives, and facilitated changing the Transaction Privilege Tax rate to further advance business attraction. Suzie has her Bachelor's and Master's degrees in Business Administration from Western New Mexico University.</p>
+
+</div>
+
+</br>
+
+
+
+<div class="info">
+
+<h2>Julie Neal</h2>
+
+<h4>Economic Development Coordinator</h4>
+
+<h4>Email: julie.neal@surpriseaz.gov</h4>
+
+<h4>Phone: 623-222-3322</h4>
+
+<p>Julie Neal has a very diverse and engaging professional background from small business owner; to experience in the commercial property management and leasing industry; and currently serves as the manager of the City of Surprise incubator- the AZ TechCelerator. 
+
+
+
+In 2009, Julie moved to Surprise, Arizona and joined the Surprise Economic Development Department, first as a volunteer assisting with the launch of the AZ TechCelerator and then hired to manage the facility in April 2010.
+
+
+
+Julie's experience as a small business owner herself, starting her first company in high school, allows her to be a great resource in assisting local entrepreneurs with the business start up process. 
+
+
+
+Julie has over 15 years of commercial property management and office leasing experience. She was the corporate sales and leasing manager for Janez Group in San Diego where she was in charge of the in-house office leasing. While in California she served on the Board of CREW San Diego, an association of commercial real estate professionals. Julie also has a California Real Estate License. 
+
+
+
+Julie has a degree in Graphic Design. She lives in Surprise with her husband and son.</p>
+
+</div>
+
+</br>
+
+
+
+<div class="info">
+
+<h2>Heather Donaldson</h2>
+
+<h4>Economic Development Coordinator</h4>
+
+<h4>Email: heather.donaldson@surpriseaz.gov</h4>
+
+<h4>Phone: 623-222-3330</h4>
+
+<p>Heather Donaldson is the Economic Development Coordinator for the City of Surprise. Her primary focus is to execute the City's initiatives related to new retail business attraction and business retention and expansion strategies.
+
+
+
+Heather began her career with the City of Surprise in 2011, during which time she gained significant experience across multiple departments including Community and Recreation Services, Community Development and Economic Development. Prior to joining the Economic Development Department, Heather was the Planning Project Coordinator in the Community Development Department where she served as a liaison between developers and the City when new or existing projects were submitted for development review and approval.
+
+
+
+Heather has over ten years of private sector real estate law experience working within the title and homebuilding industries in addition to approximately ten years of public sector experience at both the Cities of Surprise and Glendale. She graduated from Arizona State University with a Bachelor's degree in Business Management.</p>
+
+</div>
+
+</br>
+
+
+
+<div class="info">
+
+<h2>Kelsey Lamphier</h2>
+
+<h4>Economic Development Analyst</h4>
+
+<h4>Email: kelsey.lamphier@surpriseaz.gov</h4>
+
+<h4>Phone: 623-222-3328</h4>
+
+<p>Kelsey Lamphier is the Economic Development Analyst for the City of Surprise. Her key responsibilities include market data analytics, graphic design and marketing, and research for business attraction and retention efforts. The data and materials produced assist the team in creating compelling and engaging stories for clients and residents. 
+
+
+
+Prior to becoming the Economic Development Analyst, Kelsey began her Economic Development career in Surprise as an intern. During this internship, she also worked in restaurant management where she was able to experience first-hand business operations from budgeting and inventory to personnel management. 
+
+
+
+Kelsey graduated with her Bachelor's degree in Urban Planning and Development from Ball State University and her Masters of Public Administration with an Emphasis in Government and Policy from Grand Canyon University. She is an Arizona Economic Development Professional (AZED Pro) and actively working towards her CEcD certification.</p>
+
+</div>
+
+</br>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+<div class="footer">
+
+  <h2>Footer</h2>
+
+  <h5></h5>
+
+</div>
+
+
+
+</body>
+
+</html>

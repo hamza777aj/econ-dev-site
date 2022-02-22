@@ -1,0 +1,821 @@
+<!DOCTYPE HTML>
+
+<html>
+
+ <head>
+
+  <title>Home</title>
+
+   <meta charset="UTF-8">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+ <style>
+
+* {box-sizing:border-box}
+
+
+
+/* Slideshow container */
+
+.slideshow-container {
+
+  width: 500px;
+
+  height: 300px;
+
+  position: relative;
+
+  margin: auto;
+
+}
+
+
+
+/* Hide the images by default */
+
+.mySlides {
+
+    display: none;
+
+}
+
+
+
+/* Next & previous buttons */
+
+.prev, .next {
+
+  cursor: pointer;
+
+  position: absolute;
+
+  top: 50%;
+
+  width: 10px;
+
+  margin-top: -22px;
+
+  padding: 16px;
+
+  color: white;
+
+  font-weight: bold;
+
+  font-size: 18px;
+
+  transition: 0.6s ease;
+
+  border-radius: 0 3px 3px 0;
+
+}
+
+
+
+
+
+/* Position the "next button" to the right */
+
+.next {
+
+  right: 0;
+
+  border-radius: 3px 0 0 3px;
+
+}
+
+
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover, .next:hover {
+
+  background-color: rgba(0,0,0,0.8);
+
+}
+
+
+
+/* Caption text */
+
+.text {
+
+  color: #f2f2f2;
+
+  font-size: 15px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  bottom: 8px;
+
+  width: 100%;
+
+  text-align: center;
+
+}
+
+
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+
+  color: #f2f2f2;
+
+  font-size: 12px;
+
+  padding: 8px 12px;
+
+  position: absolute;
+
+  top: 0;
+
+}
+
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+
+  cursor: pointer;
+
+  height: 15px;
+
+  width: 15px;
+
+  margin: 0 2px;
+
+  background-color: #bbb;
+
+  border-radius: 50%;
+
+  display: inline-block;
+
+  transition: background-color 0.6s ease;
+
+}
+
+
+
+.active, .dot:hover {
+
+  background-color: #717171;
+
+}
+
+
+
+/* Fading animation */
+
+.fade {
+
+  -webkit-animation-name: fade;
+
+  -webkit-animation-duration: 1.5s;
+
+  animation-name: fade;
+
+  animation-duration: 1.5s;
+
+}
+
+
+
+@-webkit-keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+@keyframes fade {
+
+  from {opacity: .4} 
+
+  to {opacity: 1}
+
+}
+
+
+
+
+
+/*-------------------------------------------------------------*/
+
+
+
+/* Style the sidenav links and the dropdown button */
+
+body {
+
+    font-family: "Lato", sans-serif;
+
+   
+
+}
+
+
+
+/* Fixed sidenav, full height */
+
+.sidenav {
+
+    height: 100%;
+
+    width: 200px;
+
+    position: fixed;
+
+    z-index: 1;
+
+    bottom: 0;
+
+    left: 0;
+
+    background-color: #111;
+
+    overflow-x: hidden;
+
+    padding-top: 20px;
+
+  
+
+
+
+}
+
+
+
+/* Style the sidenav links and the dropdown button */
+
+.sidenav a, .dropdown-btn {
+
+    padding: 6px 16px 6px 16px;
+
+    text-decoration: none;
+
+    font-size: 20px;
+
+    color: #818181;
+
+    display: block;
+
+    border: none;
+
+    background: none;
+
+    width: 100%;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    outline: none;
+
+}
+
+
+
+/* On mouse-over */
+
+.sidenav a:hover, .dropdown-btn:hover {
+
+    color: #f1f1f1;
+
+}
+
+
+
+
+
+
+
+
+
+a.active {
+
+    background-color: #4CAF50;
+
+    color: white;
+
+}
+
+
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+
+.dropdown-container {
+
+    display: none;
+
+    background-color: #262626;
+
+    padding-left: 8px;
+
+    padding-right: 10px;
+
+}
+
+
+
+/* Optional: Style the caret down icon */
+
+.fa-caret-down {
+
+    float: right;
+
+    padding-right: 8px;
+
+}
+
+
+
+/* Some media queries for responsiveness */
+
+@media screen and (max-height: 450px) {
+
+    .sidenav {padding-top: 15px;}
+
+    .sidenav a {font-size: 18px;}
+
+}
+
+
+
+.footer {
+
+    padding: 20px; /* Some padding */
+
+    text-align: center; /* Center text*/
+
+    background: #ddd; /* Grey background */
+
+    width: 101%;
+
+   
+
+    
+
+}
+
+/* Header/logo Title */
+
+.header {
+
+    padding: 1px;
+
+    text-align: center;
+
+    background: #4CAF50;
+
+    color: white;
+
+    width: 101%;
+
+    z-index: 1;
+
+    margin-top: -8px;
+
+    
+
+}
+
+
+
+/* Increase the font size of the heading */
+
+.header h1 {
+
+    font-size: 40px;
+
+    
+
+}
+
+
+
+/* Page content */
+
+.content {
+
+  padding: 16px;
+
+}
+
+
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+
+.sticky {
+
+  position: fixed;
+
+  top: 0;
+
+  width: 100%
+
+}
+
+
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+
+.sticky + .content {
+
+  padding-top: 102px;
+
+}
+
+
+
+.right-main {
+
+    text-align: center;
+
+    position: fixed;
+
+    margin-left: 1000px;    
+
+    background: #ddd;
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    margin-top: 80px;   
+
+}
+
+
+
+.right-main h2 {
+
+    text-align: center;
+
+     
+
+        
+
+    background: #c1c1c1;
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+}
+
+.main {
+
+    text-align: center;
+
+    margin-left: 180px;
+
+    margin-right: 270px;
+
+    padding: 10px;
+
+}
+
+.btn {
+
+  border: 2px solid black;
+
+  border-radius: 5px;
+
+  background-color: white;
+
+  color: black;
+
+  padding: 14px 28px;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+}
+
+
+
+/* Green */
+
+.Email {
+
+  
+
+  border-color: #4CAF50;
+
+  color: green;
+
+}
+
+
+
+.Email:hover {
+
+  background-color: #4CAF50;
+
+  color: white;
+
+}
+
+
+
+table {
+
+    font-family: arial, sans-serif;
+
+    border-collapse: collapse;
+
+    width: 100%;
+
+    padding: 20px;
+
+    margin-left: 20px;
+
+    margin-right: 20px;
+
+    
+
+}
+
+
+
+td, th {
+
+    border: 1px solid #dddddd;
+
+    text-align: left;
+
+    padding: 8px;
+
+}
+
+
+
+tr:nth-child(even) {
+
+    background-color: #dddddd;
+
+}
+
+
+
+</style>
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+<div class="header" id="myHeader">
+
+  <h1>Economic Development</h1>
+
+</div>
+
+
+
+<div class="sidenav">
+
+  <a class="active" href="page/home.html" >Home</a>
+
+
+
+  <button class="dropdown-btn">Business
+
+    <i class="fa fa-caret-down"></i>
+
+  </button>
+
+  <div class="dropdown-container">
+
+    <a href="page/aztech.html">AZ Techcelerator</a>
+
+    <a href="page/licensing.html">Licensing/ Applications</a>
+
+    <a href="page/advanced-manufacturing.html">(A)dvanced Manufacturing</a>
+
+    <a href="page/innovation.html">(I)nnovation</a>
+
+    <a href="page/medical-travel.html">(M)edical Travel</a>
+
+    <a href="page/signature-retail.html">(S)ignature Retail</a>
+
+  </div>
+
+
+
+  <button class="dropdown-btn">Jobs 
+
+    <i class="fa fa-caret-down"></i>
+
+  </button>
+
+  <div class="dropdown-container">
+
+    
+
+    <a href="page/employees.html">Employees/Seek a job</a>
+
+    <a href="page/employers.html">Employers/Submit a job</a>
+
+  </div> 
+
+
+
+  <button class="dropdown-btn">Demographics 
+
+    <i class="fa fa-caret-down"></i>
+
+  </button>
+
+  <div class="dropdown-container">
+
+    <a href="page/demo-reports.html">Reports, Forms, Brochures</a>
+
+    <a href="page/demo-areas.html">Development Areas</a>
+
+  </div>
+
+  
+
+  <a href="page/community-profile.html">Community Profile</a>
+
+
+
+  <a href="page/faq.html">FAQ</a>
+
+
+
+  <a href="page/about.html">About Us</a>
+
+</div>
+
+
+
+<script>
+
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+
+var i;
+
+
+
+for (i = 0; i < dropdown.length; i++) {
+
+  dropdown[i].addEventListener("click", function() {
+
+    this.classList.toggle("active");
+
+    var dropdownContent = this.nextElementSibling;
+
+    if (dropdownContent.style.display === "block") {
+
+      dropdownContent.style.display = "none";
+
+    } else {
+
+      dropdownContent.style.display = "block";
+
+    }
+
+  });
+
+}
+
+</script>
+
+<script>
+
+// When the user scrolls the page, execute myFunction 
+
+window.onscroll = function() {myFunction()};
+
+
+
+// Get the header
+
+var header = document.getElementById("myHeader");
+
+
+
+// Get the offset position of the navbar
+
+var sticky = header.offsetTop;
+
+
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+
+function myFunction() {
+
+  if (window.pageYOffset > sticky) {
+
+    header.classList.add("sticky");
+
+  } else {
+
+    header.classList.remove("sticky");
+
+  }
+
+}
+
+</script>
+
+
+
+  <div class="right-main">
+
+      <h2>CONTACT US</h2>
+
+      <h5>Director: Jeanine Jerkovic</h5>
+
+      <h5>Phone: 623-222-3300</h5>
+
+      <h5>Email: econdev@surpriseaz.gov</h5>
+
+      <h5>Fax: 623-222-3301</h5>
+
+      <h5>Address: 16000 N. Civic Center Plaza Surprise, AZ 85374</h5>
+
+      <div id="map" style="width:100%;height:200px;"></div>
+
+
+
+
+
+      
+
+<script>
+
+function myMap() {
+
+  var mapCanvas = document.getElementById("map");
+
+  var mapOptions = {
+
+    center: new google.maps.LatLng(33.629566, -112.368046), zoom: 10
+
+  };
+
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+
+}
+
+</script>
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDstQB3zNs_wv26n958FQz6GOvrTYYcuno&callback=myMap"></script>
+
+      
+
+</div>
+
+
+
+  <div class="main">
+
+          <h1>Community Profile</h1>
+
+<a href="https://www.surpriseaz.gov/DocumentCenter/View/37006/Surprise-Community-Profile?bidId=" target="_blank" rel="noopener">
+
+
+
+<img src="https://www.surpriseaz.gov/ImageRepository/Document?documentID=37007" style="width: 100%; border: 0;">
+
+</a>
+
+
+
+</div>     
+
+
+
+<div class="footer">
+
+  <h2>Footer</h2>
+
+</div>
+
+
+
+</body>
+
+</html>
